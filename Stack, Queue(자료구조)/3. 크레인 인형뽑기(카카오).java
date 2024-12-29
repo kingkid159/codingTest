@@ -55,11 +55,11 @@ public class Main {
 
       if(!stack.empty() && stack.lastElement() == arr[x][y]){
         stack.pop();
-        result += 2;
+        result += 2; // 기존 인형 한개 터지고 새 인형은 터진것으로 간주하여 넣지 않았기 때문에 총 두개가 터진것으로 카운팅한다.
       }else{
         stack.push(arr[x][y]);
       }
-      arr[x][y] = 0;
+      arr[x][y] = 0; //인형 뽑았으니 뽑은자리는 빈자리로 변경
     }
     
     System.out.print(result);
